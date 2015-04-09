@@ -22,17 +22,7 @@ EventManager.prototype = {
 			}
 		}
 	},
-	removeListener : function(d, c) {
-		if (this.listeners[d]) {
-			for ( var b = 0, a = this.listeners[d].length; b < a; b++) {
-				if (this.listeners[d][b] === c) {
-					this.listeners[d].slice(b, 1);
-					break
-				}
-			}
-		}
-	},
-	removeListeners : function(d) {
+	removeListener : function(d) {
 		if (this.listeners[d]) {
 			this.listeners[d] = null;
 		}
